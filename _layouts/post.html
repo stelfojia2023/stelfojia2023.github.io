@@ -1,0 +1,49 @@
+---
+layout: default
+---
+<article class="post article">
+  <header class="post-header">
+    {% for column in site.columns %}
+      {% if page.categories contains column.slug %}
+        <p class="column-kicker"><a href="{{ column.slug | prepend: '/' | append: '/' | relative_url }}">{{ column.name }}</a></p>
+      {% endif %}
+    {% endfor %}
+    <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y年%-m月%-d日" }}</time>
+    <h1>{{ page.title }}</h1>
+    {% include tags.html tags=page.tags %}
+  </header>
+  <div class="prose">
+    {{ content }}
+  </div>
+  <footer class="post-end">
+    {% if page.previous or page.next %}
+      <nav class="post-pager" aria-label="相邻文章">
+        {% if page.next %}
+          {% assign next_is_newer = false %}
+          {% if page.next.date > page.date %}{% assign next_is_newer = true %}{% endif %}
+          <a href="{{ page.next.url | relative_url }}" {% if next_is_newer %}rel="next"{% else %}rel="prev"{% endif %}>
+            <span class="pager-label">{% if next_is_newer %}较新的一篇{% else %}较早的一篇{% endif %}</span>
+            <span class="pager-title">{{ page.next.title }}</span>
+          </a>
+        {% endif %}
+        {% if page.previous %}
+          {% assign prev_is_newer = false %}
+          {% if page.previous.date > page.date %}{% assign prev_is_newer = true %}{% endif %}
+          <a href="{{ page.previous.url | relative_url }}" {% if prev_is_newer %}rel="next"{% else %}rel="prev"{% endif %}>
+            <span class="pager-label">{% if prev_is_newer %}较新的一篇{% else %}较早的一篇{% endif %}</span>
+            <span class="pager-title">{{ page.previous.title }}</span>
+          </a>
+        {% endif %}
+      </nav>
+    {% endif %}
+    <p class="back-home">
+      {% for column in site.columns %}
+        {% if page.categories contains column.slug %}
+          <a href="{{ column.slug | prepend: '/' | append: '/' | relative_url }}">返回{{ column.name }}</a>
+          <span aria-hidden="true"> · </span>
+        {% endif %}
+      {% endfor %}
+      <a href="{{ '/' | relative_url }}">返回首页</a>
+    </p>
+  </footer>
+</article>

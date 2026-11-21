@@ -1,0 +1,28 @@
+{% assign index_url = include.slug | prepend: "/" | append: "/" | relative_url %}
+<section class="column-section" id="{{ include.slug }}"{% if include.show_heading %} aria-labelledby="column-{{ include.slug }}"{% endif %}>
+  {% if include.show_heading %}
+    <div class="section-head">
+      <h2 id="column-{{ include.slug }}"><a href="{{ index_url }}">{{ include.name }}</a></h2>
+    </div>
+  {% endif %}
+  <!-- articles:{{ include.slug }}:start -->
+  {% assign column_count = 0 %}
+  {% for post in site.posts %}
+    {% if post.categories contains include.slug %}
+      {% assign column_count = column_count | plus: 1 %}
+      <article class="post-item">
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y年%-m月%-d日" }}</time>
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        {% assign summary = post.excerpt | strip_html | normalize_whitespace %}
+        {% if summary != "" %}
+          <p class="excerpt">{{ summary | truncate: 140, "…" }}</p>
+        {% endif %}
+        {% include tags.html tags=post.tags %}
+      </article>
+    {% endif %}
+  {% endfor %}
+  {% if column_count == 0 %}
+    <p class="empty">这一栏还没有文章。</p>
+  {% endif %}
+  <!-- articles:{{ include.slug }}:end -->
+</section>
