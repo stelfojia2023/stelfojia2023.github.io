@@ -1,0 +1,33 @@
+---
+layout: page
+title: 标签
+permalink: /tags/
+---
+
+{% if site.tags.size == 0 %}
+  <p class="empty">还没有标签。在文章的 front matter 里写上 <code>tags</code> 即可出现在这里。</p>
+{% else %}
+  {% assign sorted_tags = site.tags | sort %}
+  <ul class="tag-cloud">
+    {% for tag in sorted_tags %}
+      <li>
+        <a href="#tag-{{ tag[0] | slugify: 'raw' }}">{{ tag[0] }} <span>{{ tag[1].size }}</span></a>
+      </li>
+    {% endfor %}
+  </ul>
+
+  {% for tag in sorted_tags %}
+    {% assign tagged_posts = tag[1] | sort: "date" | reverse %}
+    <section class="tag-group" id="tag-{{ tag[0] | slugify: 'raw' }}">
+      <h2>{{ tag[0] }}</h2>
+      <ul class="archive-list">
+        {% for post in tagged_posts %}
+          <li>
+            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </section>
+  {% endfor %}
+{% endif %}

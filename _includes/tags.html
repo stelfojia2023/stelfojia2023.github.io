@@ -1,0 +1,7 @@
+{% if include.tags and include.tags != empty %}
+<ul class="tag-list">
+  {% for tag in include.tags %}
+    <li><a href="{{ '/tags/' | relative_url }}#tag-{{ tag | slugify: 'raw' }}">{{ tag }}</a></li>
+  {% endfor %}
+</ul>
+{% endif %}

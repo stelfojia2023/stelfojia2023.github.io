@@ -1,0 +1,59 @@
+# 知行札记
+# 由 GitHub Pages 用原生 Jekyll 从 main 分支根目录构建。
+# 不在仓库里添加自定义 GitHub Actions。
+# 额外插件只有 Pages 白名单中的 jekyll-feed、jekyll-seo-tag、jekyll-sitemap。
+
+title: 知行札记
+tagline: Jerry 的个人博客
+description: Jerry 的个人博客。把读过的、想过的、做过的记下来。
+author:
+  name: Jerry
+lang: zh-CN
+timezone: Asia/Shanghai
+
+url: https://stelfojia2023.github.io
+baseurl: ""
+
+# 关掉 GitHub Pages 默认的 primer 主题，使用本仓库自己的布局。
+theme: null
+
+markdown: kramdown
+highlighter: rouge
+permalink: /:year/:month/:day/:title/
+excerpt_separator: "<!-- more -->"
+future: true
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+feed:
+  path: /feed.xml
+  posts_limit: 20
+
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: page
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .bundle
+  - .gitignore
+  - node_modules

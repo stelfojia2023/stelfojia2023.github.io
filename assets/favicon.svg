@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="知">
+  <rect width="64" height="64" rx="10" fill="#8f3d32"/>
+  <rect x="8" y="8" width="48" height="48" rx="4" fill="none" stroke="#f6f1ea" stroke-width="2"/>
+  <text x="32" y="43" text-anchor="middle" font-size="28" fill="#f6f1ea" font-family="Songti SC, STSong, Noto Serif SC, SimSun, serif">知</text>
+</svg>

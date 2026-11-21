@@ -1,0 +1,30 @@
+---
+layout: default
+---
+<section class="lede">
+  <h1>所知所行，记在这里。</h1>
+  <p>{{ site.description }}</p>
+</section>
+
+<section class="post-list" aria-labelledby="latest-heading">
+  <div class="section-head">
+    <h2 id="latest-heading">最新文章</h2>
+    <p class="post-count">共 {{ site.posts.size }} 篇</p>
+  </div>
+
+  {% if site.posts.size == 0 %}
+    <p class="empty">还没有文章。在 <code>_posts</code> 里新增一篇 <code>YYYY-MM-DD-title.md</code> 即可。</p>
+  {% else %}
+    {% for post in site.posts %}
+      <article class="post-item">
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y年%-m月%-d日" }}</time>
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        {% assign summary = post.excerpt | strip_html | normalize_whitespace %}
+        {% if summary != "" %}
+          <p class="excerpt">{{ summary | truncate: 140, "…" }}</p>
+        {% endif %}
+        {% include tags.html tags=post.tags %}
+      </article>
+    {% endfor %}
+  {% endif %}
+</section>

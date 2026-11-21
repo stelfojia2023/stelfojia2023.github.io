@@ -1,0 +1,41 @@
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <p>© {{ site.time | date: "%Y" }} {{ site.title }} · {{ site.author.name }}</p>
+    <p><a href="{{ '/feed.xml' | relative_url }}">订阅 RSS</a></p>
+  </div>
+</footer>
+<script>
+  (function () {
+    var root = document.documentElement;
+    var button = document.getElementById("theme-toggle");
+    if (!button) return;
+
+    function preferred() {
+      return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+
+    function current() {
+      var set = root.getAttribute("data-theme");
+      if (set === "light" || set === "dark") return set;
+      return preferred();
+    }
+
+    function paint(theme) {
+      var nextIsDark = theme !== "dark";
+      button.textContent = nextIsDark ? "深色" : "浅色";
+      button.setAttribute("aria-label", nextIsDark ? "切换到深色" : "切换到浅色");
+      button.setAttribute("aria-pressed", theme === "dark" ? "true" : "false");
+    }
+
+    paint(current());
+
+    button.addEventListener("click", function () {
+      var next = current() === "dark" ? "light" : "dark";
+      root.setAttribute("data-theme", next);
+      try {
+        localStorage.setItem("theme", next);
+      } catch (e) {}
+      paint(next);
+    });
+  })();
+</script>

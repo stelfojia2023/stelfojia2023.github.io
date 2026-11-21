@@ -1,0 +1,22 @@
+<a class="skip" href="#content">跳到主要内容</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="{{ '/' | relative_url }}">
+      <span class="seal" aria-hidden="true">知</span>
+      <span class="brand-text">
+        <span class="brand-name">知行札记</span>
+        <span class="brand-meta">Jerry</span>
+      </span>
+    </a>
+    <div class="header-tools">
+      <nav class="site-nav" aria-label="站点">
+        {% assign here = page.url | default: "/" %}
+        <a href="{{ '/' | relative_url }}" {% if here == "/" or here == "/index.html" %}aria-current="page"{% endif %}>首页</a>
+        <a href="{{ '/archive/' | relative_url }}" {% if here == "/archive/" or here == "/archive/index.html" %}aria-current="page"{% endif %}>归档</a>
+        <a href="{{ '/tags/' | relative_url }}" {% if here == "/tags/" or here == "/tags/index.html" %}aria-current="page"{% endif %}>标签</a>
+        <a href="{{ '/about/' | relative_url }}" {% if here == "/about/" or here == "/about/index.html" %}aria-current="page"{% endif %}>关于</a>
+      </nav>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="切换到深色" aria-pressed="false">深色</button>
+    </div>
+  </div>
+</header>
