@@ -230,6 +230,63 @@ img {
   border-color: var(--muted);
 }
 
+.column-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.05rem;
+  padding: 0.15rem 0 0.95rem;
+}
+
+.column-nav a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.column-nav a:hover,
+.column-nav a[aria-current="page"] {
+  color: var(--ink);
+}
+
+.column-nav a[aria-current="page"] {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.28em;
+}
+
+.column-section {
+  margin-top: 2.5rem;
+}
+
+.column-section .section-head {
+  margin-top: 0;
+}
+
+.column-section .section-head h2 {
+  font-family: var(--serif);
+  font-size: 1.45rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.column-section .section-head h2 a,
+.prose .post-item h3 a,
+.column-kicker a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.column-section .section-head h2 a:hover,
+.prose .post-item h3 a:hover,
+.column-kicker a:hover {
+  color: var(--accent);
+}
+
+.column-kicker {
+  margin: 0 0 0.35rem;
+  color: var(--accent);
+  font-size: 0.875rem;
+}
+
 .site-main {
   flex: 1;
   padding: 2.25rem 0 3rem;

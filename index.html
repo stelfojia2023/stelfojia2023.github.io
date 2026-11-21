@@ -6,6 +6,10 @@ layout: default
   <p>{{ site.description }}</p>
 </section>
 
+{% for column in site.columns %}
+  {% include column-list.html slug=column.slug name=column.name show_heading=true %}
+{% endfor %}
+
 <section class="post-list" aria-labelledby="latest-heading">
   <div class="section-head">
     <h2 id="latest-heading">最新文章</h2>

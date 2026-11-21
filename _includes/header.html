@@ -19,4 +19,13 @@
       <button class="theme-toggle" id="theme-toggle" type="button" aria-label="切换到深色" aria-pressed="false">深色</button>
     </div>
   </div>
+  <div class="wrap">
+    <nav class="column-nav" aria-label="栏目">
+      {% for column in site.columns %}
+        {% assign column_path = column.slug | prepend: "/" | append: "/" %}
+        {% assign column_index = column_path | append: "index.html" %}
+        <a href="{{ column_path | relative_url }}"{% if here == column_path or here == column_index %} aria-current="page"{% endif %}>{{ column.name }}</a>
+      {% endfor %}
+    </nav>
+  </div>
 </header>

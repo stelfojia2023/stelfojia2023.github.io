@@ -1,0 +1,44 @@
+{
+  "entries": [],
+  "cursors": {
+    "ai": {
+      "next": null,
+      "note": "尚未阅读，也尚未发布。"
+    },
+    "tongjian": {
+      "next": "卷一「初，智宣子將以瑤為後」",
+      "next_start": "初，智宣子將以瑤為後",
+      "read_until": null,
+      "note": "首篇已在旧站发布。本站从该句接续，未上线前不要改这个游标。"
+    },
+    "agama": {
+      "next": "T02n0099 第2经 p.1a16–27",
+      "next_start": "T02n0099 第2经 p.1a16–27",
+      "read_until": null,
+      "note": "第1经已在旧站发布。本站从第2经接续，核对原典 p.1a16–27。"
+    },
+    "matt": {
+      "next": "https://www.aihero.dev/skills-ask-matt",
+      "next_cursor": "https://www.aihero.dev/skills-ask-matt",
+      "series_order": 2,
+      "skill_slug": "ask-matt",
+      "note": "第1课 matt-001-setup 只在旧站，本站不转载、不重发。下一课是 series_order 2。"
+    }
+  },
+  "entry_schema": {
+    "description": "entries 里每一项在对应文章上线并核验后追加。published 为 true 之前，不要改 cursors。",
+    "fields": {
+      "date": "YYYY-MM-DD，北京时间。",
+      "category": "ai、tongjian、agama、matt 之一。",
+      "title": "文章标题。",
+      "url": "本站绝对地址，例如 https://stelfojia2023.github.io/2026/11/22/ai-slug/ 。",
+      "source": "官方原文或原典链接。",
+      "published": "布尔值。只有线上 URL 已核验后才为 true。",
+      "read_until": "通鉴、阿含：本篇读到的截止位置。AI 与 Matt 用 null。",
+      "next_start": "通鉴、阿含：下一篇从哪里接。AI 与 Matt 用 null。",
+      "series_order": "仅 Matt：这一课的课次，正整数。",
+      "skill_slug": "仅 Matt：官方技能短名，例如 ask-matt。",
+      "next_cursor": "仅 Matt：下一课的官方 URL。"
+    }
+  }
+}

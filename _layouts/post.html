@@ -1,8 +1,13 @@
 ---
 layout: default
 ---
-<article class="post">
+<article class="post article">
   <header class="post-header">
+    {% for column in site.columns %}
+      {% if page.categories contains column.slug %}
+        <p class="column-kicker"><a href="{{ column.slug | prepend: '/' | append: '/' | relative_url }}">{{ column.name }}</a></p>
+      {% endif %}
+    {% endfor %}
     <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y年%-m月%-d日" }}</time>
     <h1>{{ page.title }}</h1>
     {% include tags.html tags=page.tags %}
@@ -31,6 +36,14 @@ layout: default
         {% endif %}
       </nav>
     {% endif %}
-    <p class="back-home"><a href="{{ '/' | relative_url }}">返回首页</a></p>
+    <p class="back-home">
+      {% for column in site.columns %}
+        {% if page.categories contains column.slug %}
+          <a href="{{ column.slug | prepend: '/' | append: '/' | relative_url }}">返回{{ column.name }}</a>
+          <span aria-hidden="true"> · </span>
+        {% endif %}
+      {% endfor %}
+      <a href="{{ '/' | relative_url }}">返回首页</a>
+    </p>
   </footer>
 </article>

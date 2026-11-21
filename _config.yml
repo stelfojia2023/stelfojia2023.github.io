@@ -37,6 +37,17 @@ kramdown:
   hard_wrap: false
   syntax_highlighter: rouge
 
+# 每日四栏。slug 写入文章的 category，首页锚点与栏目页都用它。
+columns:
+  - slug: ai
+    name: AI 工程图解
+  - slug: tongjian
+    name: 通鉴今读
+  - slug: agama
+    name: 阿含日课
+  - slug: matt
+    name: Matt 技能课
+
 defaults:
   - scope:
       path: ""
@@ -53,6 +64,8 @@ exclude:
   - README.md
   - Gemfile
   - Gemfile.lock
+  - CATEGORY-PUBLISHING.md
+  - docs
   - vendor
   - .bundle
   - .gitignore
