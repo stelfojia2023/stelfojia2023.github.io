@@ -10,14 +10,10 @@
     var button = document.getElementById("theme-toggle");
     if (!button) return;
 
-    function preferred() {
-      return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-    }
-
     function current() {
       var set = root.getAttribute("data-theme");
       if (set === "light" || set === "dark") return set;
-      return preferred();
+      return "dark";
     }
 
     function paint(theme) {

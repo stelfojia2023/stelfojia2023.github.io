@@ -1,7 +1,7 @@
-/* 文章共用样式。在站点 style.css 与该文 extra_css 之后引入。 */
+/* 文章共用样式。放在站点样式和该文 extra_css 之后。 */
 
 .article {
-  font-family: var(--sans, "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", "微软雅黑", sans-serif);
+  font-family: var(--sans, "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", sans-serif);
   font-size: 1.0625rem;
   line-height: 1.9;
   overflow-wrap: break-word;
@@ -9,85 +9,92 @@
 
 .article h2,
 .article h3 {
-  font-family: var(--serif, "Songti SC", "Noto Serif SC", "SimSun", serif);
-  line-height: 1.4;
+  font-weight: 750;
+  letter-spacing: 0;
+  line-height: 1.35;
 }
 
 .article .para {
   position: relative;
-  padding-left: 2.4rem;
+  padding-left: 2.5rem;
 }
 
 .article .para-num {
   position: absolute;
   left: 0;
   top: 0.15rem;
-  color: var(--muted, #6e655e);
-  font-variant-numeric: tabular-nums;
-  font-size: 0.875rem;
+  color: var(--accent, #facc15);
+  font-family: var(--mono, ui-monospace, monospace);
+  font-size: 0.82rem;
+  font-weight: 650;
   line-height: 1.9;
   text-decoration: none;
 }
 
-.article .para-num:hover,
-.article .para-num:focus-visible {
-  color: var(--accent, #8f3d32);
-}
-
 .article .jump {
-  margin-left: 0.45rem;
-  font-size: 0.8125rem;
+  margin-left: 0.4rem;
+  font-size: 0.82rem;
   white-space: nowrap;
-  text-underline-offset: 0.18em;
 }
 
 .article .para-source {
   font-family: var(--serif, "Songti SC", "Noto Serif SC", "SimSun", serif);
+  line-height: 1.95;
 }
 
 .article details {
   margin: 1rem 0;
-  padding: 0.35rem 0.9rem 0.6rem;
-  border: 1px solid var(--line, rgba(34, 30, 27, 0.14));
-  border-radius: 8px;
-  background: var(--accent-soft, rgba(143, 61, 50, 0.08));
+  padding: 0.45rem 0.95rem 0.7rem;
+  border: 1px solid var(--line, rgba(245, 245, 244, 0.14));
+  border-radius: 12px;
+  background: var(--card, rgba(28, 25, 23, 0.88));
 }
 
 .article summary {
   cursor: pointer;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.6;
 }
 
-.article details[open] summary {
-  margin-bottom: 0.35rem;
-}
+.article details[open] summary { margin-bottom: 0.35rem; }
 
 .article figure,
-.article .diagram {
-  margin: 1.25rem 0;
-}
+.article .diagram { margin: 1.25rem 0; }
 
 .article figure img,
 .article figure svg,
 .article .diagram img,
 .article .diagram svg {
   display: block;
+  width: 100%;
   max-width: 100%;
   height: auto;
 }
 
+.article .diagram {
+  padding: 0.8rem;
+  background: var(--card, rgba(28, 25, 23, 0.88));
+  border: 1px solid var(--line, rgba(245, 245, 244, 0.14));
+  border-radius: 12px;
+}
+
+.article .diagram rect,
+.article .diagram .box {
+  fill: transparent;
+  stroke: currentColor;
+}
+
 .article figcaption {
-  margin-top: 0.4rem;
-  color: var(--muted, #6e655e);
+  margin-top: 0.45rem;
+  color: var(--faint, #a8a29e);
   font-size: 0.875rem;
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
 .article .stop {
   margin: 1rem 0;
   padding: 0.15rem 0 0.15rem 0.9rem;
-  border-left: 2px solid var(--accent, #8f3d32);
+  border-left: 3px solid var(--accent, #facc15);
 }
 
 .article pre,
@@ -97,16 +104,11 @@
 }
 
 @media (max-width: 640px) {
-  .article .para {
-    padding-left: 0;
-  }
-
+  .article .para { padding-left: 0; }
   .article .para-num {
     position: static;
+    display: inline;
     margin-right: 0.35rem;
   }
-
-  .article .jump {
-    white-space: normal;
-  }
+  .article .jump { white-space: normal; }
 }

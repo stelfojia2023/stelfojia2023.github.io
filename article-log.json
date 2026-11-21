@@ -1,5 +1,58 @@
 {
-  "entries": [],
+  "entries": [
+    {
+      "date": "2026-11-21",
+      "category": "ai",
+      "title": "先把路径写死，再决定要不要交给模型自己走",
+      "url": "https://stelfojia2023.github.io/2026/11/21/ai-building-effective-agents/",
+      "source": "https://www.anthropic.com/engineering/building-effective-agents",
+      "published": false,
+      "read_until": null,
+      "next_start": null,
+      "series_order": null,
+      "skill_slug": null,
+      "next_cursor": null
+    },
+    {
+      "date": "2026-11-21",
+      "category": "tongjian",
+      "title": "五样长处压不住一件不仁",
+      "url": "https://stelfojia2023.github.io/2026/11/21/tongjian-zhi-yao/",
+      "source": "https://zh.wikisource.org/wiki/%E8%B3%87%E6%B2%BB%E9%80%9A%E9%91%91/%E5%8D%B7001",
+      "published": false,
+      "read_until": "智果別族於太史為輔氏",
+      "next_start": "趙簡子之子，長曰伯魯",
+      "series_order": null,
+      "skill_slug": null,
+      "next_cursor": null
+    },
+    {
+      "date": "2026-11-21",
+      "category": "agama",
+      "title": "对着会变的东西，如实地看",
+      "url": "https://stelfojia2023.github.io/2026/11/21/agama-sa2/",
+      "source": "https://suttacentral.net/sa2/lzh",
+      "published": false,
+      "read_until": "T02n0099 第2经 p.1a16–27，至诸比丘欢喜奉行",
+      "next_start": "第3经开头，正文未写入本篇",
+      "series_order": null,
+      "skill_slug": null,
+      "next_cursor": null
+    },
+    {
+      "date": "2026-11-21",
+      "category": "matt",
+      "title": "先问该用哪一项技能",
+      "url": "https://stelfojia2023.github.io/2026/11/21/matt-ask-matt/",
+      "source": "https://www.aihero.dev/skills-ask-matt",
+      "published": false,
+      "read_until": null,
+      "next_start": null,
+      "series_order": 2,
+      "skill_slug": "ask-matt",
+      "next_cursor": "https://www.aihero.dev/skills-grill-with-docs"
+    }
+  ],
   "cursors": {
     "ai": {
       "next": null,

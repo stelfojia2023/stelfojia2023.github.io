@@ -142,7 +142,7 @@ Matt 再写 `series_order`、`skill_slug`、`next_cursor`。其他栏这两项�
 - 本地执行 `bundle exec jekyll build`，构建没有错误。
 - 本栏若未通过，就不要把它算进这次合并，也不要推进它的游标。
 
-不要在日更里改首页设计、导航或 `assets/article-theme.css`。
+不要在日更里改首页设计、导航或 `assets/article-theme.css`。2026-11-21 这次改版改过首页和文章版式，是单独的外观调整。`<!-- articles:<category>:start -->` 与 `<!-- articles:<category>:end -->` 的写法没有变，列表仍由 `category` 生成。此后的日更不要再改这套外观。
 
 ## 6. 合并之后核对线上地址
 
