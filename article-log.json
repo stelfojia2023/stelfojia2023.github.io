@@ -1,5 +1,58 @@
 {
-  "entries": [],
+  "entries": [
+    {
+      "date": "2026-11-22",
+      "category": "ai",
+      "title": "工作流和代理：先把最简单的那一档做对",
+      "url": "https://stelfojia2023.github.io/2026/11/22/ai-workflows-and-agents/",
+      "source": "https://www.anthropic.com/research/building-effective-agents",
+      "published": false,
+      "read_until": null,
+      "next_start": null,
+      "series_order": null,
+      "skill_slug": null,
+      "next_cursor": null
+    },
+    {
+      "date": "2026-11-22",
+      "category": "tongjian",
+      "title": "五样长处，一样不仁",
+      "url": "https://stelfojia2023.github.io/2026/11/22/tongjian-zhi-yao-heir/",
+      "source": "https://zh.wikisource.org/wiki/資治通鑑/卷001",
+      "published": false,
+      "read_until": "智果別族於太史為輔氏",
+      "next_start": "趙簡子之子，長曰伯魯",
+      "series_order": null,
+      "skill_slug": null,
+      "next_cursor": null
+    },
+    {
+      "date": "2026-11-22",
+      "category": "agama",
+      "title": "第2经：正思惟，然后如实知道无常",
+      "url": "https://stelfojia2023.github.io/2026/11/22/agama-sa2-right-reflection/",
+      "source": "https://cbetaonline.dila.edu.tw/zh-tw/T02n0099_001",
+      "published": false,
+      "read_until": "T02n0099 第2经 p.1a16–27，至「歡喜奉行」",
+      "next_start": "T02n0099 第3经 p.1a28「於色不知、不明、不斷、不離欲」",
+      "series_order": null,
+      "skill_slug": null,
+      "next_cursor": null
+    },
+    {
+      "date": "2026-11-22",
+      "category": "matt",
+      "title": "第2课：先问该用哪一项，然后停住",
+      "url": "https://stelfojia2023.github.io/2026/11/22/matt-ask-matt/",
+      "source": "https://www.aihero.dev/skills-ask-matt",
+      "published": false,
+      "read_until": null,
+      "next_start": null,
+      "series_order": 2,
+      "skill_slug": "ask-matt",
+      "next_cursor": "https://www.aihero.dev/skills-grill-with-docs"
+    }
+  ],
   "cursors": {
     "ai": {
       "next": null,
