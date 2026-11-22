@@ -51,6 +51,58 @@
       "series_order": 2,
       "skill_slug": "ask-matt",
       "next_cursor": "https://www.aihero.dev/skills-grill-with-docs"
+    },
+    {
+      "date": "2026-11-23",
+      "category": "ai",
+      "title": "上下文是一份有限预算",
+      "url": "https://stelfojia2023.github.io/2026/11/23/ai-context-budget/",
+      "source": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+      "published": false,
+      "read_until": null,
+      "next_start": null,
+      "series_order": null,
+      "skill_slug": null,
+      "next_cursor": null
+    },
+    {
+      "date": "2026-11-23",
+      "category": "tongjian",
+      "title": "长子丢了简，幼子还背得出",
+      "url": "https://stelfojia2023.github.io/2026/11/23/tongjian-bolu-wuxu/",
+      "source": "https://zh.wikisource.org/wiki/資治通鑑/卷001",
+      "published": false,
+      "read_until": "立以為後",
+      "next_start": "簡子使尹鐸為晉陽",
+      "series_order": null,
+      "skill_slug": null,
+      "next_cursor": null
+    },
+    {
+      "date": "2026-11-23",
+      "category": "agama",
+      "title": "第3经：四样没做到，就不能断苦",
+      "url": "https://stelfojia2023.github.io/2026/11/23/agama-sa3-four-conditions/",
+      "source": "https://cbetaonline.dila.edu.tw/zh-tw/T02n0099_001",
+      "published": false,
+      "read_until": "T02n0099 第3经 p.1a28–1b05，至「歡喜奉行」",
+      "next_start": "T02n0099 第4经 p.1b06「於色不知、不明、不斷、不離欲、心不解脫者」",
+      "series_order": null,
+      "skill_slug": null,
+      "next_cursor": null
+    },
+    {
+      "date": "2026-11-23",
+      "category": "matt",
+      "title": "第3课：词一定下来，就写进词汇表",
+      "url": "https://stelfojia2023.github.io/2026/11/23/matt-grill-with-docs/",
+      "source": "https://www.aihero.dev/skills-grill-with-docs",
+      "published": false,
+      "read_until": null,
+      "next_start": null,
+      "series_order": 3,
+      "skill_slug": "grill-with-docs",
+      "next_cursor": "https://www.aihero.dev/skills-to-spec"
     }
   ],
   "cursors": {
