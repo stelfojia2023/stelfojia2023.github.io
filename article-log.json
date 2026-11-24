@@ -103,6 +103,45 @@
       "series_order": 3,
       "skill_slug": "grill-with-docs",
       "next_cursor": "https://www.aihero.dev/skills-to-spec"
+    },
+    {
+      "date": "2026-11-23",
+      "category": "tongjian",
+      "title": "一条河，四种看法：智伯之亡",
+      "url": "https://stelfojia2023.github.io/2026/11/23/tongjian-lundao-zhibo/",
+      "source": "https://zh.wikisource.org/wiki/資治通鑑/卷001",
+      "published": false,
+      "read_until": null,
+      "next_start": null,
+      "series_order": null,
+      "skill_slug": null,
+      "next_cursor": null
+    },
+    {
+      "date": "2026-11-23",
+      "category": "ai",
+      "title": "让 Claude 连跑两周去“拆”自己的服务：Anthropic 混沌循环 9 步实操 + 每步机理（以充电桩 CSMS 为例）",
+      "url": "https://stelfojia2023.github.io/2026/11/23/ai-anthropic-chaos-loop/",
+      "source": "https://claude.dev/blog/chaos-loop-claude-docs-launch/",
+      "published": false,
+      "read_until": null,
+      "next_start": null,
+      "series_order": null,
+      "skill_slug": null,
+      "next_cursor": null
+    },
+    {
+      "date": "2026-11-24",
+      "category": "ai",
+      "title": "给编码 Agent 装上“纵深防御”：照着 Anthropic《企业编码 Agent 安全指南》一步步配 Claude Code（以 ESP32/OCPP 固件团队为例）",
+      "url": "https://stelfojia2023.github.io/2026/11/24/ai-anthropic-securing-coding-agents/",
+      "source": "https://claude.com/resources/articles/enterprise-guide-to-securing-coding-agents",
+      "published": false,
+      "read_until": null,
+      "next_start": null,
+      "series_order": null,
+      "skill_slug": null,
+      "next_cursor": null
     }
   ],
   "cursors": {
