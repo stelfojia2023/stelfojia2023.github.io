@@ -103,6 +103,19 @@
       "series_order": 3,
       "skill_slug": "grill-with-docs",
       "next_cursor": "https://www.aihero.dev/skills-to-spec"
+    },
+    {
+      "date": "2026-11-24",
+      "category": "agama",
+      "title": "一块岛，还是一片水：自洲自依",
+      "url": "https://stelfojia2023.github.io/2026/11/24/agama-lundao-zizhou/",
+      "source": "https://cbetaonline.dila.edu.tw/zh-tw/T02n0099_002",
+      "published": false,
+      "read_until": null,
+      "next_start": null,
+      "series_order": null,
+      "skill_slug": null,
+      "next_cursor": null
     }
   ],
   "cursors": {
