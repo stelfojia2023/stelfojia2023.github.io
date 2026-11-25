@@ -103,6 +103,19 @@
       "series_order": 3,
       "skill_slug": "grill-with-docs",
       "next_cursor": "https://www.aihero.dev/skills-to-spec"
+    },
+    {
+      "date": "2026-11-25",
+      "category": "tongjian",
+      "title": "一把匕首，四种忠：豫让刺赵襄子",
+      "url": "https://stelfojia2023.github.io/2026/11/25/tongjian-lundao-yurang/",
+      "source": "https://zh.wikisource.org/wiki/資治通鑑/卷001",
+      "published": false,
+      "read_until": null,
+      "next_start": null,
+      "series_order": null,
+      "skill_slug": null,
+      "next_cursor": null
     }
   ],
   "cursors": {
